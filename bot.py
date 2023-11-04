@@ -16,7 +16,7 @@ def run_discord_bot():
     client = discord.Client(intents=intents)
 
     @client.event
-    async def on_ready();
+    async def on_ready():
         print(f'{client.user} is now running!')
 
     @client.event
