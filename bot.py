@@ -10,7 +10,7 @@ async def send_message(message, user_message, is_private):
         print(e)
 
 def run_discord_bot():
-    TOKEN = 'MTE3MDQ0NTM1NjgyMDA3NDU1OA.GmELWb.uQmAiA6uyOPT_v2ZfsN-q2kWJEU40VsMOEZB6s'
+    TOKEN = 'No peeking'
     intents = discord.Intents.default()
     intents.message_content = True
     client = discord.Client(intents=intents)
