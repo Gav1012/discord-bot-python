@@ -5,6 +5,9 @@ def get_response(message: str) -> str:
 
     if p_message == 'hello':
         return 'HIIIII'
+    
+    if p_message == 'repeat after me':
+        return 'repeat after me'
 
     if message == 'roll':
         return str(random.randint(1, 6))
