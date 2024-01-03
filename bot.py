@@ -10,7 +10,7 @@ async def send_message(message, user_message, is_private):
         print(e)
 
 def run_discord_bot():
-    TOKEN = 'No peeking'
+    TOKEN = ''
     intents = discord.Intents.default()
     intents.message_content = True
     client = discord.Client(intents=intents)
@@ -35,5 +35,11 @@ def run_discord_bot():
             await send_message(message, user_message, is_private = True)
         else:
             await send_message(message, user_message, is_private = False)
+
+    @client.event
+    async def on_member_join(member):
+        channel = client.get_channel(111111)
+        embed=discord.Embed(title="Welcome ", description=f"{member.mention} to BlurAzure's Server!")
+        await channel.send(embed=embed)
 
     client.run(TOKEN)
